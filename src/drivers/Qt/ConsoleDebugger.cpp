@@ -46,6 +46,7 @@
 #include <QGuiApplication>
 #include <QStandardPaths>
 #include <QSettings>
+#include <QToolBar>
 #include <QToolTip>
 #include <QWindow>
 #include <QScreen>
@@ -3266,6 +3267,7 @@ void ConsoleDebugger::openGotoAddrDialog(void)
 	sbox->setRange(0x0000, 0xFFFF);
 	sbox->setDisplayIntegerBase(16);
 	sbox->setValue( X.PC );
+	sbox->selectAll();
 
 	QFont font = sbox->font();
 	font.setCapitalization(QFont::AllUppercase);
